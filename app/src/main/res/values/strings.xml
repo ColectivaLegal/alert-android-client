@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AlertApp</string>
+    <string name="alert_button_label">Send</string>
+</resources>
