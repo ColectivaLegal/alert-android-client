@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@android:style/Theme.Holo"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/phoneInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:textSize="26dp"
+            android:width="300dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:inputType="phone"
+            android:hint="@string/phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/alert_button"
-        android:layout_width="@dimen/alert_button_width"
-        android:layout_height="@dimen/alert_button_height"
-        android:text="@string/alert_button_label"
-        android:background="@color/colorAccent"/>
-
-</LinearLayout>
+        android:id="@+id/alertButton"
+        android:textSize="50dp"
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Alert"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorButtonText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneInputLayout" />
+</android.support.constraint.ConstraintLayout>
